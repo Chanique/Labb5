@@ -1,131 +1,87 @@
-//===========================================================================
-//SCSS variables
-
-$pFontSize: 18px;
-$pColor: black;
-
-$navBackground: darkgrey ;
-
-$darkModeText: white;
-
-$containerWidth: 980px;
-
-
-//===========================================================================
-//Mixins
-@mixin textProperties{
-    width: 100%;
-    margin-top: 20px;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    h1{
-        font-size: 34px;
-    }
-    h2{
-        font-size: 30px;
-    }
-    h3{
-        font-size: 26px;
-    }
-    p{
-        font-size: 18px;
-    }
+body {
+    background-color: #232323;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 62.5%; /*1 em = 10px */
+	margin: 0;
 }
 
-//===========================================================================
-//Mixin with media query
-@mixin textForPhone{
-    @media (max-width:786px){
-        h1{
-            font-size: 24px;
-        }
-        h2{
-            font-size: 22px;
-        }
-        h3{
-            font-size: 20px;
-        }
-        p{
-            font-size: 16px;
-        }
-    }
+h1 {
+    color: white;
+	background-color: #2c6d99;
+	font-size: 3.5em;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 20px 0;
 }
 
-
-//===========================================================================
-//Normal CSS-rules
-
-//Class that extends on col
-.imgBoxRules{
-    min-width: 200px;
-    text-align: center;
-}
-.col{
-    @extend .imgBoxRules;
+#color-display {
+	display: block;
+	font-size: 2em;
 }
 
-
-.oContainer{
-width: auto;
-height: auto;
-}
-.contentContainer{
-    max-width: $containerWidth;
-    margin-left: auto;
-    margin-right: auto;
-}
-.innerDarkModeBG{
-    background-color: rgb(26, 26, 26);
-}
-.innerLightModeBG{
-    background-color: rgb(229, 229, 226);
-}
-.outerDarkModeBG{
-    background-color: black;
-}
-.outerLightModeBG{
-    background-color: aliceblue;
-}
-.darkModeArticle{
-    background-color: rgb(39, 39, 39);
-    h1{
-        color: $darkModeText;
-    }
-    h2{
-        color: $darkModeText;
-    }
-    h3{
-        color: $darkModeText;
-    }
-    p{
-        color: $darkModeText;
-    }
+#stripe {
+	background: white;
+	height: 50px;
+	text-align: center;
+	color: black;
 }
 
-
-//Classes that use mixins
-article{
-    @include textProperties;
-    @include textForPhone;
+#message {
+	text-transform: uppercase;
+	color: #2C8E99;
+	font-size: 1.5em;
+	display: inline-block;
+	width: 20%;
 }
 
-//Nested classes
-nav {
-    background-color:$navBackground;
-    ul{
-        margin:0px;
-        padding:0px;
-        list-style: none;
-    }
-    li{
-        padding:10px;
-        display: inline-block;
-    }
-    a{
-        text-decoration: none;
-    }
+button {
+	outline: none;
+	color: #2c6d99;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	text-transform: uppercase;
+	font-size: 1.4em;
+	background-color: white;
+	height: 100%;
+	letter-spacing: 1px;
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	o-transition: all 0.3s;
 }
-p {
-    font-size: $pFontSize;
-    color: $pColor;
+
+button:hover {
+	background-color: #2c6d99;
+	color: white;
+}
+
+.container {
+	max-width: 600px;
+	margin: 0 auto;
+	padding-top: 20px;
+
+}
+.square {
+	width: 30%;
+	background-color: purple;
+	padding-bottom: 30%;
+	float: left;
+	margin: 1.66%;
+	transition: background .5s;
+	-webkit-transition: background .5s;
+	-moz-transition: background .5s;
+	o-transition: background .5s;
+} 
+
+.selected {
+    background-color: #2c6d99;
+    color: white; 
+}
+
+.square {
+	border-radius: 20%;
+}
+
+* {
+	border: 0px solid red;
 }
