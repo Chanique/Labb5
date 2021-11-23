@@ -11,6 +11,14 @@ var resetButton = document.querySelector("#reset");
 var modeButtons = document.querySelectorAll(".mode");
 var easyButton = document.querySelector(".mode");
 
+//Call init function
+init(); 
+
+//Call reset funtion if reset button is clicked
+resetButton.addEventListener("click", function(){
+    reset(); 
+});
+
 //Functions 
 
 //Initial game function
