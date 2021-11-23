@@ -60,6 +60,12 @@ function setupMode() {
     }
 }
 
+//Add random colors to colors[]
+function chooseColor() {
+    var random = Math.floor(Math.random() *  colors.length);
+    return colors[random]; 
+}
+
 //Generate random colors
 function genRandomColors(num) {
     //create empty array
