@@ -13,6 +13,14 @@ var easyButton = document.querySelector(".mode");
 
 //Functions 
 
+//Initial game function
+function init() {
+    colorDisplay.textContent = pickedColor; 
+    setupSquares(); 
+    setupMode(); 
+    reset(); 
+}
+
 //Square color function
 function setupSquares() {
     //loop for every square
