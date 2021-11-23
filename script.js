@@ -60,6 +60,14 @@ function setupMode() {
     }
 }
 
+//Change display color and square colors
+function changeColors(color) {
+    for(var i = 0; i < squares.length; i++){
+        squares[i].style.backgroundColor = color; 
+        h1.style.backgroundColor = color; 
+    }
+}
+
 //Add random colors to colors[]
 function chooseColor() {
     var random = Math.floor(Math.random() *  colors.length);
