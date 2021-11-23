@@ -60,6 +60,19 @@ function setupMode() {
     }
 }
 
+//Generate random colors
+function genRandomColors(num) {
+    //create empty array
+    var arr = []; 
+    //add color to array
+    for(var i = 0; i < num; i++){
+        arr.push(makeColor()); 
+    }
+
+    //return array with colors
+    return arr; 
+}
+
 //Make rgb color
 function makeColor() {
     //returns the largest integer less than or equal to a random number multiplied with 256
