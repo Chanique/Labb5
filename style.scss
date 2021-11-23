@@ -58,6 +58,11 @@ button:hover {
 	o-transition: background .5s;
 } 
 
+.selected {
+    background-color: #285e64;
+    color: white; 
+}
+
 .square {
 	border-radius: 20%;
 }
