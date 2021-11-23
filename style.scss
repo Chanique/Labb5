@@ -1,131 +1,32 @@
-//===========================================================================
-//SCSS variables
-
-$pFontSize: 18px;
-$pColor: black;
-
-$navBackground: darkgrey ;
-
-$darkModeText: white;
-
-$containerWidth: 980px;
-
-
-//===========================================================================
-//Mixins
-@mixin textProperties{
-    width: 100%;
-    margin-top: 20px;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    h1{
-        font-size: 34px;
-    }
-    h2{
-        font-size: 30px;
-    }
-    h3{
-        font-size: 26px;
-    }
-    p{
-        font-size: 18px;
-    }
+body {
+	background-color: #232323;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 62.5%; /*1 em = 10px */
+	margin: 0;
 }
 
-//===========================================================================
-//Mixin with media query
-@mixin textForPhone{
-    @media (max-width:786px){
-        h1{
-            font-size: 24px;
-        }
-        h2{
-            font-size: 22px;
-        }
-        h3{
-            font-size: 20px;
-        }
-        p{
-            font-size: 16px;
-        }
-    }
+#container {
+	max-width: 600px;
+	margin: 0 auto;
+	padding-top: 20px;
+
+}
+.square {
+	width: 30%;
+	background-color: purple;
+	padding-bottom: 30%;
+	float: left;
+	margin: 1.66%;
+	transition: background .5s;
+	-webkit-transition: background .5s;
+	-moz-transition: background .5s;
+	o-transition: background .5s;
+} 
+
+.square {
+	border-radius: 20%;
 }
 
-
-//===========================================================================
-//Normal CSS-rules
-
-//Class that extends on col
-.imgBoxRules{
-    min-width: 200px;
-    text-align: center;
-}
-.col{
-    @extend .imgBoxRules;
-}
-
-
-.oContainer{
-width: auto;
-height: auto;
-}
-.contentContainer{
-    max-width: $containerWidth;
-    margin-left: auto;
-    margin-right: auto;
-}
-.innerDarkModeBG{
-    background-color: rgb(26, 26, 26);
-}
-.innerLightModeBG{
-    background-color: rgb(229, 229, 226);
-}
-.outerDarkModeBG{
-    background-color: black;
-}
-.outerLightModeBG{
-    background-color: aliceblue;
-}
-.darkModeArticle{
-    background-color: rgb(39, 39, 39);
-    h1{
-        color: $darkModeText;
-    }
-    h2{
-        color: $darkModeText;
-    }
-    h3{
-        color: $darkModeText;
-    }
-    p{
-        color: $darkModeText;
-    }
-}
-
-
-//Classes that use mixins
-article{
-    @include textProperties;
-    @include textForPhone;
-}
-
-//Nested classes
-nav {
-    background-color:$navBackground;
-    ul{
-        margin:0px;
-        padding:0px;
-        list-style: none;
-    }
-    li{
-        padding:10px;
-        display: inline-block;
-    }
-    a{
-        text-decoration: none;
-    }
-}
-p {
-    font-size: $pFontSize;
-    color: $pColor;
+* {
+	border: 0px solid red;
 }
