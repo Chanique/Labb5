@@ -1,74 +1,17 @@
-h1 {
-  color: white;
-  background-color: #2c6d99;
-  font-size: 3.5em;
-  text-align: center;
-  text-transform: uppercase;
-  margin: 0;
-  padding: 10px 0;
-}
+/* Error: unmatched "}".
+ *    ,
+ * 43 | }
+ *    | ^
+ *    '
+ *   style.scss 43:1  root stylesheet */
 
-#color-display {
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
   display: block;
-  font-size: 2em;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: unmatched "}".\a    \2577 \a 43 \2502  }\d\a    \2502  ^\a    \2575 \a   style.scss 43:1  root stylesheet';
 }
-
-#stripe {
-  background: white;
-  height: 50px;
-  text-align: center;
-  color: black;
-}
-button {
-
-  outline: none;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #2c6d99;
-  text-transform: uppercase;
-  font-size: 1.4em;
-  background-color: white;
-  height: 100%;
-  letter-spacing: 1px;
-  transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  o-transition: all 0.3s;
-}
-
-button:hover {
-  background-color: #2c6d99;
-  color: white;
-}
-
-.imgBoxRules, .col {
-  min-width: 200px;
-  text-align: center;
-}
-
-#container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding-top: 20px;
-}
-
-.square {
-  width: 30%;
-  background-color: purple;
-  padding-bottom: 30%;
-  float: left;
-  margin: 1.66%;
-  transition: background 0.5s;
-  -webkit-transition: background 0.5s;
-  -moz-transition: background 0.5s;
-  o-transition: background 0.5s;
-}
-
-.square {
-  border-radius: 20%;
-}
-
-* {
-  border: 0px solid red;
-}
-
-/*# sourceMappingURL=style.css.map */
