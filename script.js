@@ -35,3 +35,28 @@ function setupSquares() {
     }
 }
 
+//Chose mode easy or hard -> easy is 3 squares and hard is 6 squares
+function setupMode() {
+    //loop through easy and hard button
+    for(var i = 0; i < modeButtons.length; i++){
+        modeButtons[i].addEventListener("click", function(){
+            for(var i = 0; i < modeButtons.length; i++){
+                //remove class .selected from clicked button
+                modeButtons[i].classList.remove("selected");
+            }
+
+            //add selected class to buttons
+            this.classList.add("selected"); 
+
+            //if easy button is clicked change number of squares to 3
+            if(this.textContent === "Easy"){
+                numSquares = 3; 
+            //else keep number of squares as 6
+            } else {
+                numSquares = 6;
+            }
+            reset(); 
+        });
+    }
+}
+
