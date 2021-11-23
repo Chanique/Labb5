@@ -60,6 +60,24 @@ function setupMode() {
     }
 }
 
+//Reset function
+function reset() {
+    colors = genRandomColors(numSquares); 
+    pickedColor = chooseColor();
+    colorDisplay.textContent = pickedColor; 
+    h1.style.backgroundColor = "#2c6d99"; 
+    messageDisplay.textContent = ""; 
+
+    for(var i = 0; i < squares.length; i++){
+        if(colors[i]){
+            squares[i].style.display = "block"; 
+            squares[i].style.backgroundColor = colors[i]; 
+        } else {
+            squares[i].style.display = "none"; 
+        }
+    }
+}
+
 //Change display color and square colors
 function changeColors(color) {
     for(var i = 0; i < squares.length; i++){
