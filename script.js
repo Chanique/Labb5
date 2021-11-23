@@ -60,3 +60,13 @@ function setupMode() {
     }
 }
 
+//Make rgb color
+function makeColor() {
+    //returns the largest integer less than or equal to a random number multiplied with 256
+    var r = Math.floor(Math.random() * 256); 
+    var g = Math.floor(Math.random() * 256); 
+    var b = Math.floor(Math.random() * 256); 
+
+    //returns all the values in rgb format
+    return "rgb(" + r + ", " + g + ", " + b + ")";
+}
